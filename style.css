@@ -12,8 +12,6 @@
     --Light-grayish-cyan: hsl(185, 41%, 84%);
     --Very-light-grayish-cyan: hsl(189, 41%, 97%);
     --White: hsl(0, 0%, 100%);
-
-
 }
 
 html{
@@ -29,12 +27,233 @@ html{
 
 body{
     font-family: 'Space Mono', monospace;
+    background-color: var(--Light-grayish-cyan);
+}
+ 
+.main{
+    display: grid;
+    place-items: center;
+    margin-bottom: 2rem;
 }
 
+.main__image{
+    margin: 3rem 0;
+    width: 15%;
+}
+
+.main__content{
+    background-color: var(--White);
+    border-radius: 2rem;
+}
+
+.main__section{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__label{
+    color: var(--Dark-grayish-cyan);
+    font-size: 1.2rem;
+}
+
+.main__inputs{
+    position: relative;
+}
+
+.main__input{
+    background-color: var(--Very-light-grayish-cyan);
+    padding: .5rem;
+    outline: none;
+    border: none;
+    color: var(--Dark-grayish-cyan);
+    font-weight: 700;
+    font-size: 1.6rem;
+    width: 95%;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    text-align: right;
+}
+
+.text__mesaje{
+    color: red;
+    position: relative;
+    top: -76px;
+    right: -213px;
+    font-size: 1.2rem;
+    display: none;
+}
+
+.text__mesaje.error{
+    display: block;
+}
+
+.main__input::placeholder{
+    text-align: right;
+    font-weight: 700;
+    color: var(--Grayish-cyan);
+}
+
+.main__input:hover{
+    cursor: pointer;
+    border: 1px solid var(--Strong-cyan);
+}
+
+.main__input--border.error{
+    border: 1px solid red;
+}
+
+.main__img{
+    position: absolute;
+    top: 33px;
+    left: 6px;
+}
+
+.main__tips-options{
+    display: grid;
+    grid-template-columns: repeat(2 , 10rem);
+    gap: 1rem;
+    justify-content: space-around;
+    justify-items: center;
+    margin: 1rem 0;
+} 
+
+.main__tip{
+    display: none;
+}
+
+.main__amount{
+    background-color: var(--Very-dark-cyan);
+    color: var(--Very-light-grayish-cyan);
+    padding: .5rem 1rem;
+    display: inline-block;
+    font-size: 1.4rem;
+    border-radius: .5rem;
+    text-align: center;
+    font-weight: 700;
+    width: 9rem;
+}
+
+.main__amount--color{
+    color: var(--Dark-grayish-cyan);
+    background-color: var(--Very-light-grayish-cyan);
+    outline: none;
+    border: none;
+    
+}
+
+.main__amount:hover{
+    background-color: var(--Strong-cyan);
+    cursor: pointer;
+}
+
+.main__amount--color:hover{
+    border: 1px solid var(--Strong-cyan);
+    background-color: inherit;
+}
+
+.main__content--total{
+    background-color: var(--Very-dark-cyan);
+    padding: 1.5rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 10rem);
+    gap: 1rem;
+    justify-items: center;
+    justify-content: center;
+}
+
+.main__totals{
+    color: var(--White);
+    align-self: flex-start;
+    display: block;
+}
+
+.main__totals--font{
+    color: var(--Light-grayish-cyan);
+    font-size: .9rem;
+}
+
+.main__numbers{
+    font-size: 2rem;
+    color: var(--Strong-cyan);
+    font-weight: 700;
+}
+
+.main__btn{
+    border: none;
+    outline: none;
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    width: 90%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    grid-column: 3/1;
+    margin-top: 1rem;
+}
+
+.main__btn:hover{
+    background-color: var(--Light-grayish-cyan);
+    cursor: pointer;
+}
 .attribution { 
     font-size: 11px; text-align: center; 
 }
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 768px) { 
+
+    .main__content{
+        min-height: 35rem;
+    }
+
+    .main__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+    }
+
+    .main__section{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap:2rem;
+    }
+
+    .main__image{
+        margin: 5rem 0;
+        width: 5%;
+    }
+        
+    .main__tips-options{
+        grid-template-columns: repeat(3 , 10rem);
+    } 
+
+    .main__content--total{
+        padding: 5rem 0rem;
+        grid-template-columns: repeat(2, 20rem);
+        align-content: space-between;
+        justify-content: space-evenly;
+        height: 30rem;
+    }
+
+    .main__totals{
+        font-size: 1.2rem;
+    }
+
+    .main__numbers{
+        font-size: 3rem;
+    }
+
+    .main__btn{
+        margin-top: 5rem;
+    }    
+
+
 }
