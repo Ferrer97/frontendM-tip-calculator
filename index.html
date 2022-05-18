@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+
+  <main class="main">
+    <div class="main__content">
+      <section class="main__section">
+        <label class="main__label" for="bill">Bill</label>
+        <input class="main__input" type="number" id="bill" name="bill">
+        <input class="main__img" type="image" src="./images/icon-dollar.svg" alt="">
+        <div class="main__tips">
+          <label class="main__label" for="Tip"> Select Tip %</label>
+          <input class="main__tip" type="radio" name="tip" value="5%">
+          <label class="main__amount" for="5%">5%</label>
+          <input class="main__tip" type="radio" name="tip" value="10%">
+          <label class="main__amount" for="10%">10%</label>
+          <input class="main__tip" type="radio" name="tip" value="15%">
+          <label class="main__amount" for="15%">15%</label>
+          <input class="main__tip" type="radio" name="tip" value="25%">
+          <label class="main__amount" for="25%">25%</label>
+          <input class="main__tip" type="radio" name="tip" value="50%">
+          <label class="main__amount" for="custom">custom</label>
+        </div>
+        <label for="people" class="main__label">Number of People</label>
+        <input type="number" class="main__input" name="people" id="people">
+        <input class="main__img" type="image" src="./images/icon-person.svg" alt="">
+        <article class="main__article">
+          <div class="main__content">
+            <p class="main__totals">Tip Amount<span class="main__totals main__totals--font">/ person</span></p>
+            <p class="main__numbers">$0.00</p>
+            <p class="main__totals">Total<span class="main__totals main__totals--font">/ person</span></p>
+            <p class="main__numbers">$0.00</p>
+            <input class="main__btn" type="reset" value="Reset">
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/Ferrer97">Julio Ferrer</a>.
+    </div>
+  </footer>
+</body>
+</html>
