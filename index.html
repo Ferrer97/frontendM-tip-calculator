@@ -17,11 +17,11 @@
   <main class="main">
     <img class="main__image" src="./images/logo.svg" alt="">
     <div class="main__content">
-      <section class="main__section">
+      <form class="main__section">
         <div class="main__container">
           <div class="main__inputs">
           <label class="main__label" for="bill">Bill</label>
-          <input class="main__input" type="number" id="bill" placeholder="0" name="bill">
+          <input class="main__input" type="text" id="bill" placeholder="0" name="bill">
           <input class="main__img" type="image" src="./images/icon-dollar.svg" alt="">
         </div>
           
@@ -39,13 +39,13 @@
             <label class="main__amount" for="25%">25%</label>
             <input class="main__tip" type="radio" name="tip" id="50%" value="50%">
             <label class="main__amount" for="50%">50%</label>
-            <input class="main__amount main__amount--color" type="number" name="tip" placeholder="Custom" id="custom" >
+            <input class="main__amount main__amount--color" type="text" name="tip" placeholder="Custom" id="custom" >
         </article>
         </div>
 
         <div class="main__inputs">
           <label for="people" class="main__label">Number of People</label>
-          <input type="number" class="main__input main__input--border" placeholder="0" name="people" id="people">
+          <input type="text" class="main__input main__input--border" placeholder="0" name="people" id="people">
           <input class="main__img" type="image" src="./images/icon-person.svg" alt="">
           <p class="text__mesaje">Can't be zero</p>
       </div>
@@ -54,14 +54,14 @@
         <article class="main__article">
           <div class="main__content main__content--total">
             <p class="main__totals">Tip Amount<span class="main__totals main__totals--font">/ person</span></p>
-            <p class="main__numbers">$0.00</p>
+            <p id ="Amount"class="main__numbers">$0.00</p>
             <p class="main__totals">Total<span class="main__totals main__totals--font">/ person</span></p>
-            <p class="main__numbers">$0.00</p>
+            <p id="Total" class="main__numbers">$0.00</p>
             <input class="main__btn" type="reset" value="Reset">
           </div>
         </article>
 
-      </section>
+      </form>
     </div>
   </main>
   
@@ -71,5 +71,6 @@
       Coded by <a href="https://www.frontendmentor.io/profile/Ferrer97">Julio Ferrer</a>.
     </div>
   </footer>
+  <script src="app.js"></script>
 </body>
 </html>
