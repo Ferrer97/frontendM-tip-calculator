@@ -198,6 +198,11 @@ body{
     background-color: var(--Light-grayish-cyan);
     cursor: pointer;
 }
+
+.main__btn.active{
+    background-color: var(--Dark-grayish-cyan);
+}
+
 .attribution { 
     font-size: 11px; text-align: center; 
 }
