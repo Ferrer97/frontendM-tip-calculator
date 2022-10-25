@@ -1,76 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-  <main class="main">
-    <img class="main__image" src="./images/logo.svg" alt="">
-    <div class="main__content">
-      <form class="main__section">
-        <div class="main__container">
-          <div class="main__inputs">
-          <label class="main__label" for="bill">Bill</label>
-          <input class="main__input" type="text" id="bill" placeholder="0" name="bill">
-          <input class="main__img" type="image" src="./images/icon-dollar.svg" alt="">
-        </div>
-          
-        <div class="main__tips">
-          <label class="main__label" for="Tip"> Select Tip %</label>
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <main class="main">
+      <img class="main__image" src="./images/logo.svg" alt="" />
+      <div class="main__content">
+        <form class="main__section">
+          <div class="main__container">
+            <div class="main__inputs">
+              <label class="main__label" for="bill">Bill</label>
+              <input
+                class="main__input"
+                type="number"
+                id="bill"
+                placeholder="0"
+                name="bill"
+                value="100"
+              />
+              <input
+                class="main__img"
+                type="image"
+                src="./images/icon-dollar.svg"
+                alt=""
+              />
+            </div>
 
-          <article class="main__tips-options">
-            <input class="main__tip" type="radio" id="5%" name="tip" value="5%">
-            <label class="main__amount" for="5%">5%</label>
-            <input class="main__tip" type="radio" name="tip" id="10%" value="10%">
-            <label class="main__amount" for="10%">10%</label>
-            <input class="main__tip" type="radio" name="tip" id="15%" value="15%">
-            <label class="main__amount" for="15%">15%</label>
-            <input class="main__tip" type="radio" name="tip" id="25%" value="25%">
-            <label class="main__amount" for="25%">25%</label>
-            <input class="main__tip" type="radio" name="tip" id="50%" value="50%">
-            <label class="main__amount" for="50%">50%</label>
-            <input class="main__amount main__amount--color" type="text" name="tip" placeholder="Custom" id="custom" >
-        </article>
-        </div>
+            <div class="main__tips">
+              <label class="main__label" for="Tip"> Select Tip %</label>
 
-        <div class="main__inputs">
-          <label for="people" class="main__label">Number of People</label>
-          <input type="text" class="main__input main__input--border" placeholder="0" name="people" id="people">
-          <input class="main__img" type="image" src="./images/icon-person.svg" alt="">
-          <p class="text__mesaje">Can't be zero</p>
-      </div>
-    </div>  
+              <article class="main__tips-options">
+                <input
+                  class="main__tip"
+                  type="radio"
+                  id="5%"
+                  name="tip"
+                  value="5%"
+                />
+                <label class="main__amount" for="5%">5%</label>
+                <input
+                  class="main__tip"
+                  type="radio"
+                  name="tip"
+                  id="10%"
+                  value="10%"
+                />
+                <label class="main__amount" for="10%">10%</label>
+                <input
+                  class="main__tip"
+                  type="radio"
+                  name="tip"
+                  id="15%"
+                  value="15%"
+                />
+                <label class="main__amount main__amount--selected" for="15%"
+                  >15%</label
+                >
+                <input
+                  class="main__tip"
+                  type="radio"
+                  name="tip"
+                  id="25%"
+                  value="25%"
+                />
+                <label class="main__amount" for="25%">25%</label>
+                <input
+                  class="main__tip"
+                  type="radio"
+                  name="tip"
+                  id="50%"
+                  value="50%"
+                />
+                <label class="main__amount" for="50%">50%</label>
+                <input
+                  class="main__amount main__amount--color"
+                  type="text"
+                  name="tip"
+                  placeholder="Custom"
+                  id="custom"
+                />
+              </article>
+            </div>
 
-        <article class="main__article">
-          <div class="main__content main__content--total">
-            <p class="main__totals">Tip Amount<span class="main__totals main__totals--font">/ person</span></p>
-            <p id ="Amount"class="main__numbers">$0.00</p>
-            <p class="main__totals">Total<span class="main__totals main__totals--font">/ person</span></p>
-            <p id="Total" class="main__numbers">$0.00</p>
-            <input class="main__btn" type="reset" value="Reset">
+            <div class="main__inputs">
+              <label for="people" class="main__label">Number of People</label>
+              <input
+                type="number"
+                class="main__input main__input--border"
+                placeholder="0"
+                name="people"
+                id="people"
+                value="2"
+              />
+              <input
+                class="main__img"
+                type="image"
+                src="./images/icon-person.svg"
+                alt=""
+              />
+              <p class="text__mesaje">Can't be zero</p>
+            </div>
           </div>
-        </article>
 
-      </form>
-    </div>
-  </main>
-  
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://www.frontendmentor.io/profile/Ferrer97">Julio Ferrer</a>.
-    </div>
-  </footer>
-  <script src="app.js"></script>
-</body>
+          <article class="main__article">
+            <div class="main__content main__content--total">
+              <p class="main__totals">
+                Tip Amount<span class="main__totals main__totals--font"
+                  >/ person</span
+                >
+              </p>
+              <p id="Amount" class="main__numbers">$0.00</p>
+              <p class="main__totals">
+                Total<span class="main__totals main__totals--font"
+                  >/ person</span
+                >
+              </p>
+              <p id="Total" class="main__numbers">$0.00</p>
+              <input class="main__btn" type="reset" value="Reset" />
+            </div>
+          </article>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.frontendmentor.io/profile/Ferrer97">Julio Ferrer</a
+        >.
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
 </html>

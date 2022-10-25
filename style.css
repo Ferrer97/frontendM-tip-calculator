@@ -97,6 +97,7 @@ body{
 .main__input:hover{
     cursor: pointer;
     border: 1px solid var(--Strong-cyan);
+    transition: .4s border ease-in;
 }
 
 .main__input--border.error{
@@ -134,6 +135,9 @@ body{
     width: 9rem;
 }
 
+.main__amount--selected{
+    background-color: var(--Strong-cyan);
+}
 .main__amount--color{
     color: var(--Dark-grayish-cyan);
     background-color: var(--Very-light-grayish-cyan);
